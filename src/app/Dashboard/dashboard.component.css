@@ -1,0 +1,30 @@
+.application_name{
+    position: absolute;
+    left:5px;
+    color: #E3F2FD;
+    font-size: 18px;
+}
+.user_name{
+    color: #E3F2FD;
+    font-size: 18px;
+    position: absolute;
+    right: 8%;
+}
+.logoff_button{
+    position: absolute;
+    right: 20px;
+    background-color: #E3F2FD;
+    font-weight: bolder;
+}
+.log_icon{
+    color: #304FFE;
+}
+.log_text{
+    margin-right: 8px;
+}
+.edit_icon{
+    cursor: pointer;
+}
+.delete_icon{
+    cursor: pointer;
+}

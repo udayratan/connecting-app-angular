@@ -1,0 +1,48 @@
+﻿<mat-toolbar style="background-color: #304FFE;">
+    <span class="application_name">Welcome to Connecting App </span>
+    <span class="user_name">{{user_name}} </span>
+    <button mat-raised-button class="logoff_button" (click)="Logoff()">
+        <span class="log_text">
+            Logoff
+        </span>
+        <mat-icon class="log_icon">arrow_forward_ios</mat-icon>
+    </button>
+</mat-toolbar>
+
+<mat-progress-spinner [diameter]="30" mode="indeterminate" class="loadingStyleCustom" style="left: 45%;"
+    [style.display]="display"></mat-progress-spinner>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>EmailID</th>
+            <th>Phone Number</th>
+            <th>Date of Birth</th>
+            <th>Admin User</th>
+            <th style="width: 36px;"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of All_Users_Data;index as ind;">
+            <td>{{ ind+1 }}</td>
+            <td>
+                {{user.Name}}
+            </td>
+            <td>{{user.EmailID}}</td>
+            <td>{{user.PhoneNumber}}</td>
+            <td>{{user.DOB | date}}</td>
+            <td>{{ (user.Whether_Admin_User) ? 'Yes': 'No' }}</td>
+            <td>
+                <mat-icon class="edit_icon" (click)="Edit_User_Information(user,ind)">
+                    edit
+                </mat-icon>
+                <mat-icon class="delete_icon">
+                    delete_forever
+                </mat-icon>
+            </td>
+        </tr>
+    </tbody>
+</table>
