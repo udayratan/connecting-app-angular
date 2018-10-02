@@ -37,7 +37,6 @@ import {
 
 import { NgModule } from '@angular/core';
 import { LoadingComponent } from './loading/loading.component';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
   imports: [MatAutocompleteModule,
@@ -71,8 +70,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     MatTableModule,
     MatTabsModule,
     MatToolbarModule,
-    MatTooltipModule,
-    AngularFontAwesomeModule
+    MatTooltipModule
   ],
   exports: [
     MatAutocompleteModule,
@@ -107,8 +105,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    LoadingComponent,
-    AngularFontAwesomeModule
+    LoadingComponent
   ],
   declarations: [
     LoadingComponent

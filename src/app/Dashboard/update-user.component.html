@@ -1,13 +1,29 @@
-<ol>
-    <li>
-      <mat-form-field>
-        <input matInput [(ngModel)]="name" placeholder="What's your name?">
-      </mat-form-field>
-    </li>
-    <li>
-      <button mat-raised-button (click)="openDialog()">Pick one</button>
-    </li>
-    <li *ngIf="animal">
-      You chose: <i>  Uday  </i>
-    </li>
-  </ol>
+<mat-form-field class="formFieldWidth">
+  <input type="text" style="color: #2962FF;" matInput [formControl]="Name" autocomplete="off" required placeholder="Name">
+  <mat-error *ngIf="Name.invalid" class="invalid-feedback">
+    <strong>{{ get_Name_Error() }}</strong>
+  </mat-error>
+</mat-form-field>
+
+<mat-form-field class="formFieldWidth">
+  <input type="text" style="color: #2962FF; padding:5px;" matInput [formControl]="PhoneNumber"
+      autocomplete="off" placeholder="Phone Number" maxlength="10" required>
+  <mat-error *ngIf="PhoneNumber.invalid" class="invalid-feedback">
+      <strong>{{ get_Phone_Number_Error() }}</strong>
+  </mat-error>
+</mat-form-field>
+
+<mat-form-field class="formFieldWidth">
+  <input type="date" style="color: #2962FF; padding:5px;" matInput [formControl]="DOB" autocomplete="off"
+      placeholder="Date of Birth" required>
+  <mat-error *ngIf="DOB.invalid" class="invalid-feedback">
+      <strong>{{ get_DOB_Error() }}</strong>
+  </mat-error>
+</mat-form-field>
+
+<div style="margin-top: 20px">
+  <button mat-raised-button class="btn btn-primary" color="primary" (click)="onSubmit()">Update</button>
+  <mat-progress-spinner [diameter]="30" mode="indeterminate" class="loadingStyleCustom" style="left: 45%;"
+      [style.display]="display"></mat-progress-spinner>
+  <a (click)="close()" class="btn btn-link">Cancel</a>
+</div>

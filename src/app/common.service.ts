@@ -24,6 +24,8 @@ export class CommonServices {
   Register_User = '/Register_User';
   Login = '/Login';
   List_All_Users = '/List_All_Users';
+  Update_User_Information = '/Update_User_Information';
+  Remove_User = '/Remove_User';
 
   //Http Comman Api Method
   public http_call_method(url: String, value: Object) {

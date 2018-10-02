@@ -9,7 +9,7 @@ import { routing } from './app.routing';
 import { CommonServices } from './common.service';
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DashboardComponent, UpdateUserComponent } from './Dashboard';
+import { DashboardComponent, UpdateUserComponent, RemoveUserComponent } from './Dashboard';
 import { AuthGuard } from "./auth.guard";
 
 @NgModule({
@@ -18,7 +18,8 @@ import { AuthGuard } from "./auth.guard";
     LoginComponent,
     RegisterComponent,
     DashboardComponent,
-    UpdateUserComponent
+    UpdateUserComponent,
+    RemoveUserComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +32,6 @@ import { AuthGuard } from "./auth.guard";
   ],
   providers: [CommonServices, AuthGuard],
   bootstrap: [AppComponent],
-  entryComponents: [UpdateUserComponent]
+  entryComponents: [UpdateUserComponent, RemoveUserComponent]
 })
 export class AppModule { }

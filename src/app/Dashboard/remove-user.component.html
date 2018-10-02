@@ -1,0 +1,10 @@
+
+<div style="margin-top: 20px;">
+    <p style="margin-bottom: 22px;">
+        Are you sure? You want to remove <span style="font-weight: bolder;color: #3F51B5">{{Operation_User.Name }}</span>
+    </p>
+  <button mat-raised-button class="btn btn-primary" color="primary" (click)="onSubmit()">Confirm</button>
+  <mat-progress-spinner [diameter]="30" mode="indeterminate" class="loadingStyleCustom" style="left: 45%;"
+      [style.display]="display"></mat-progress-spinner>
+  <a (click)="close()" class="btn btn-link">Cancel</a>
+</div>
